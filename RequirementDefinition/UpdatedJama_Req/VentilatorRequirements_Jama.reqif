@@ -1,0 +1,1799 @@
+<?xml version="1.0"?>
+<REQ-IF  xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:doors="http://www.ibm.com/rdm/doors/REQIF/xmlns/1.0" xmlns:reqif="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:reqif-common="http://www.prostep.org/reqif" xmlns:reqif-xhtml="http://www.w3.org/1999/xhtml" xmlns:rm="http://www.ibm.com/rm" xmlns:rm-reqif="http://www.ibm.com/rm/reqif" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <THE-HEADER>
+    <REQ-IF-HEADER IDENTIFIER="a36e4361-d86d-4f12-8311-9cdc94dc260b">
+      <COMMENT></COMMENT>
+      <CREATION-TIME>2019-11-12T16:07:04-06:00</CREATION-TIME>
+      <REPOSITORY-ID></REPOSITORY-ID>
+      <REQ-IF-TOOL-ID>Jama Software</REQ-IF-TOOL-ID>
+      <REQ-IF-VERSION>1.0</REQ-IF-VERSION>
+      <SOURCE-TOOL-ID>Jama Software</SOURCE-TOOL-ID>
+      <TITLE>Functional Requirements</TITLE>
+    </REQ-IF-HEADER>
+  </THE-HEADER>
+  <CORE-CONTENT>
+    <REQ-IF-CONTENT>
+      <DATATYPES>
+        <DATATYPE-DEFINITION-STRING DESC="" IDENTIFIER="_88d8509b-2ba5-3131-a1da-bb8ea6d16b62" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="Standard Jama String datatype" MAX-LENGTH="999999999"/>
+        <DATATYPE-DEFINITION-XHTML DESC="" IDENTIFIER="_7a619499-0638-3feb-949c-dbb2978bc574" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="Standard Jama Document datatype"/>
+        <DATATYPE-DEFINITION-ENUMERATION DESC="" IDENTIFIER="_48e189d2-a0f8-358c-a47b-c5efcac53d77" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="Priority">
+          <SPECIFIED-VALUES>
+            <ENUM-VALUE DESC="" IDENTIFIER="_528d1fa9-20b9-3083-a857-78df1bf0319a" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="Low">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="300" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+            <ENUM-VALUE DESC="" IDENTIFIER="_2e888edc-eefd-30c6-91e2-e0e10c523c46" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="Medium">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="301" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+            <ENUM-VALUE DESC="" IDENTIFIER="_99f28603-afca-3fe8-ada4-ca370243bc8e" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="High">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="302" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+          </SPECIFIED-VALUES>
+        </DATATYPE-DEFINITION-ENUMERATION>
+        <DATATYPE-DEFINITION-ENUMERATION DESC="Hardware-Software" IDENTIFIER="_d9636d89-ac90-4d68-a86a-65aba9044c3c" LAST-CHANGE="2020-04-04T08:21:54-05:00" LONG-NAME="HW-SW">
+          <SPECIFIED-VALUES>
+            <ENUM-VALUE DESC="" IDENTIFIER="_8bf3b94e-8931-4c4d-a06d-faa701f45fef" LAST-CHANGE="2020-04-04T08:21:54-05:00" LONG-NAME="Software">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="1" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+            <ENUM-VALUE DESC="" IDENTIFIER="_5d7f1004-e127-4b57-beae-e75f15fa571c" LAST-CHANGE="2020-04-04T08:21:54-05:00" LONG-NAME="Hardware">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="2" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+          </SPECIFIED-VALUES>
+        </DATATYPE-DEFINITION-ENUMERATION>
+        <DATATYPE-DEFINITION-ENUMERATION DESC="" IDENTIFIER="_9d0a410e-b1af-32bf-8f3c-bbbe5c9aad18" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="Status">
+          <SPECIFIED-VALUES>
+            <ENUM-VALUE DESC="" IDENTIFIER="_d9aa7be4-2da5-3986-988b-fd5996be9278" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="Draft">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="292" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+            <ENUM-VALUE DESC="" IDENTIFIER="_daa0d43c-4b78-3bbb-9fd5-e3d93a64a859" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="Under Review">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="512" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+            <ENUM-VALUE DESC="" IDENTIFIER="_6f95afad-5a1c-3c41-8f90-e0dfc4cae1e2" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="Approved">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="293" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+            <ENUM-VALUE DESC="" IDENTIFIER="_7ad1dc8e-d2a9-3fb4-89e0-7f437314c4d8" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="Completed">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="294" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+            <ENUM-VALUE DESC="" IDENTIFIER="_fa9af39c-b946-3312-9037-43695be8c563" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="Rejected">
+              <PROPERTIES>
+                <EMBEDDED-VALUE KEY="295" OTHER-CONTENT=""/>
+              </PROPERTIES>
+            </ENUM-VALUE>
+          </SPECIFIED-VALUES>
+        </DATATYPE-DEFINITION-ENUMERATION>
+        <DATATYPE-DEFINITION-INTEGER DESC="" IDENTIFIER="_c688b050-d49e-3b9a-8671-46ed521c67f9" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="Standard Jama integer datatype" MAX="9223372036854775807" MIN="-9223372036854775808"/>
+        <DATATYPE-DEFINITION-DATE DESC="" IDENTIFIER="b73a9716-d4e2-4228-b320-68385d720775" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="CreatedOn"/>
+      </DATATYPES>
+      <SPEC-TYPES>
+        <SPEC-OBJECT-TYPE DESC="" IDENTIFIER="_fce8a8d7-67db-3070-9191-108576c83c82" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="Requirement">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING DESC="ID" IDENTIFIER="_fffa0e15-40fb-3214-a0ab-65e31ba84d08" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="documentKey">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="Global ID" IDENTIFIER="_883979a9-1810-37dd-a0a8-b6fe0707eb54" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="globalId">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="Name" IDENTIFIER="_289148b7-4b73-373f-a98b-c1c8ac7f7e1f" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="name">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-XHTML DESC="Description" IDENTIFIER="_a6fa053f-f4de-3c02-9dd2-e7834aa679d5" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="description">
+              <TYPE>
+                <DATATYPE-DEFINITION-XHTML-REF>_7a619499-0638-3feb-949c-dbb2978bc574</DATATYPE-DEFINITION-XHTML-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-XHTML>
+            <ATTRIBUTE-DEFINITION-STRING DESC="Assigned" IDENTIFIER="_17ba6b39-db10-35a2-805d-6235a8379ee0" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="assignedTo">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION DESC="Priority" IDENTIFIER="_586f595f-ee58-39d5-8e16-584d60763d26" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="priority" MULTI-VALUED="false">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_48e189d2-a0f8-358c-a47b-c5efcac53d77</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+            <ATTRIBUTE-DEFINITION-ENUMERATION DESC="Status" IDENTIFIER="_c85a0d5a-e9e7-397c-a39d-bc7455059bdf" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T16:07:04-06:00" LONG-NAME="status" MULTI-VALUED="false">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_9d0a410e-b1af-32bf-8f3c-bbbe5c9aad18</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+            <ATTRIBUTE-DEFINITION-STRING DESC="Release" IDENTIFIER="_57cf89a4-8f71-3573-9c8c-a47f4840365c" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="release">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-INTEGER DESC="api_id" IDENTIFIER="_9cd7507f-fb64-3ef0-a2fe-44f14604eeb5" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="id">
+              <TYPE>
+                <DATATYPE-DEFINITION-INTEGER-REF>_c688b050-d49e-3b9a-8671-46ed521c67f9</DATATYPE-DEFINITION-INTEGER-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-INTEGER>
+            <ATTRIBUTE-DEFINITION-STRING DESC="legacy_id" IDENTIFIER="_415ccf87-5bc1-3705-bca7-0c5e0e9f8dad" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="legacy_id">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="RMIlink" IDENTIFIER="_a9ea3049-57cd-351c-93f6-4f9a7884578a" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="rmilink">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-XHTML DESC="" IDENTIFIER="_570342dd-01a0-43cb-af5c-8eaf89525836" IS-EDITABLE="false" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="Rationale">
+              <TYPE>
+                <DATATYPE-DEFINITION-XHTML-REF>_7a619499-0638-3feb-949c-dbb2978bc574</DATATYPE-DEFINITION-XHTML-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-XHTML>
+            <ATTRIBUTE-DEFINITION-STRING DESC="" IDENTIFIER="_0394fe54-9dd9-41da-84bc-f1b8759deef9" IS-EDITABLE="false" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="CreatedBy">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="" IDENTIFIER="_341c5538-a221-426a-a31f-9c7f0767cff4" IS-EDITABLE="false" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="ModifiedBy">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="" IDENTIFIER="_06aa2ca2-0380-44e8-a467-da80c524f5da" IS-EDITABLE="false" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="Keywords">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-DATE DESC="" IDENTIFIER="bd431783-035a-4369-aef2-78961e3b1a71" IS-EDITABLE="false" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="CreatedOn">
+              <TYPE>
+                <DATATYPE-DEFINITION-DATE-REF>b73a9716-d4e2-4228-b320-68385d720775</DATATYPE-DEFINITION-DATE-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-DATE>
+            <ATTRIBUTE-DEFINITION-DATE DESC="" IDENTIFIER="_66308c32-88b1-4775-80ae-ddd883a97332" IS-EDITABLE="false" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="ModifiedOn">
+              <TYPE>
+                <DATATYPE-DEFINITION-DATE-REF>b73a9716-d4e2-4228-b320-68385d720775</DATATYPE-DEFINITION-DATE-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-DATE>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPECIFICATION-TYPE DESC="Set type" IDENTIFIER="_3d0e1412-4ab8-3e85-99e4-bc121ed7396a" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="Specification of Type Set">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING DESC="Set Key" IDENTIFIER="_05c77d97-18ae-31f0-a355-eb372d916fb9" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="setKey">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="Global ID" IDENTIFIER="_4addabc2-0af1-3ffb-9cd8-fd92cd8abfbf" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="globalId">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="ID" IDENTIFIER="_a3a8b240-a08a-33d7-8b3b-d206c44e38af" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="documentKey">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="Name" IDENTIFIER="_20f2afc7-ea0d-3e33-861c-21a1a5bb1bcf" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="name">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-XHTML DESC="Description" IDENTIFIER="_3a478d10-2bb2-3d32-8d35-81d748d9bc05" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="description">
+              <TYPE>
+                <DATATYPE-DEFINITION-XHTML-REF>_7a619499-0638-3feb-949c-dbb2978bc574</DATATYPE-DEFINITION-XHTML-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-XHTML>
+            <ATTRIBUTE-DEFINITION-STRING DESC="mw_third_party_id" IDENTIFIER="_fc94eea0-6a08-3550-a4fb-5650c5233479" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="mw_third_party_id">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING DESC="legacy_id" IDENTIFIER="_6b1f94cc-c7cf-30d5-bdf0-af0d1bd4be4b" IS-EDITABLE="false" LAST-CHANGE="2019-11-12T11:07:04-06:00" LONG-NAME="legacy_id">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_88d8509b-2ba5-3131-a1da-bb8ea6d16b62</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPECIFICATION-TYPE>
+        <RELATION-GROUP-TYPE DESC="" IDENTIFIER="e7cd16f2-7d34-4c7a-949b-5861ab6fe155" LAST-CHANGE="1969-12-31T18:00:00-06:00" LONG-NAME="">
+          <SPEC-ATTRIBUTES/>
+        </RELATION-GROUP-TYPE>
+      </SPEC-TYPES>
+      <SPEC-OBJECTS>
+        <SPEC-OBJECT DESC="" IDENTIFIER="d871340b-a3e3-44ce-8d13-59eadeccab4c" LAST-CHANGE="2024-04-18T19:48:26-05:00" LONG-NAME="RL1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="General Requirements">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:45:28-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:48:26-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="da8729c3-8ea9-4492-b12f-523dd7d32d9a" LAST-CHANGE="2024-04-18T19:49:26-05:00" LONG-NAME="RL1.1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL1.1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ventilators must be designed to protect patients from electric shock, mechanical hazards, and excessive outputs of pressure (35 cmH2O) and volume</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Safety">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:46:21-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:49:26-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="c0e64872-6560-4018-b3b9-bfcc4f608e98" LAST-CHANGE="2024-04-18T19:49:45-05:00" LONG-NAME="RL1.2">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL1.2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator should function safely within a specified range of environmental conditions, including temperature and humidity</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Environmental conditions">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:48:26-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:49:45-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_9f221376-0e2c-4af0-91a6-20e240b4287a" LAST-CHANGE="2024-04-18T19:58:01-05:00" LONG-NAME="RL2.1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Mode &amp; Operation">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:51:12-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:58:01-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="d665255d-7273-4c9c-9a1e-ec34adea61a3" LAST-CHANGE="2024-04-18T19:52:12-05:00" LONG-NAME="RL2.1.1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator shall allow changing the ventilation mode while ventilation support is inactive or active</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Operating mode ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:51:51-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:52:12-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_2a5e15ac-82df-467b-ade2-3a553453d5ab" LAST-CHANGE="2024-04-18T19:55:02-05:00" LONG-NAME="RL2.1.2">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator shall provide switch input to allow start/stop ventilation operation</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Start/Stop">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:52:12-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:55:02-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_2c9c3bb9-8b60-4648-be45-3824afe184c6" LAST-CHANGE="2024-04-18T19:56:04-05:00" LONG-NAME="RL2.1.3">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.3">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator shall provide monitoring switch to allow display all essential patient vitals such as tidal volume, pressure, flow, inhale/exhale time&#160;&#160;</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Monitoring">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:55:41-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:04-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_9d42f672-17ca-4083-a6e5-82fd0ad2f3c3" LAST-CHANGE="2024-04-18T19:56:24-05:00" LONG-NAME="RL2.1.4">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.4">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The pressure controller ventilator shall be operate within a range of 5 to 50 cm H2O</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Press control">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:04-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:24-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_88284eaf-0b7e-466f-82bc-6594944e9f15" LAST-CHANGE="2024-04-18T19:56:41-05:00" LONG-NAME="RL2.1.5">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.5">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilation modes that utilizes PEEP adjustment shall range between 5 to 10 cmH2O</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="PEEP adjustment ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:24-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:41-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_041586d9-9efa-48c5-a537-738bc62bd342" LAST-CHANGE="2024-04-18T19:56:58-05:00" LONG-NAME="RL2.1.6">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.6">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilation modes that utilizes breath rate shall range between 1 to 60 breath/min</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Breath rate ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:41-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:58-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_6a67595e-5032-4e00-a6ba-8f793c5ec483" LAST-CHANGE="2024-04-18T19:57:21-05:00" LONG-NAME="RL2.1.7">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.7">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The Inspirational time adjustment range shall be 0.3s to 2.4s with an I/E ratio not exceeding 1/2 for pressure controlled ventilator</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Insp time">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:56:58-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:57:21-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="a4360b25-5247-4638-b060-c53b0f3b3b8a" LAST-CHANGE="2024-04-18T19:57:39-05:00" LONG-NAME="RL2.1.8">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.8">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The rise time adjustment range shall allow 6 levels. The associated quantitative rise times will adapt to inspiration time and the adjusted inspiratory pressure value</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Pressure level ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:57:21-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:57:39-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_1fbb8da2-5fcb-4c9f-b0c1-21d0141b83e8" LAST-CHANGE="2024-04-18T19:58:01-05:00" LONG-NAME="RL2.1.9">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.9">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The temperature along the inspiratory limb shall be monitored and controlled at 34degC in the non-invasive mode and 40degC in the invasive mode</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Heater wire humidifier ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:57:39-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:58:01-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="a327eac6-1e42-4f1c-be62-38fda292392e" LAST-CHANGE="2024-04-18T19:58:21-05:00" LONG-NAME="RL2.1.10">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.1.10">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator shall deliver gas with 50% relative humidity with absolute humidity of 10mg/L at 22degC at nose/mouth&#160;</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Humidity requirement ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:58:01-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:58:21-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_3a60dd35-683f-43a9-8f24-2eaa814c1233" LAST-CHANGE="2024-04-18T19:58:47-05:00" LONG-NAME="RL2.2">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Display">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:58:26-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:58:47-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="f299932e-47e2-4ccc-b038-a2e7e30c3be8" LAST-CHANGE="2024-04-18T19:59:13-05:00" LONG-NAME="RL2.2.1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.2.1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator should provide monitoring capabilities for patient parameters such as pressure, volume, and gas concentration</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Patient monitoring ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:58:53-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:59:13-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_6cce0d00-ed63-4812-bdf9-b69ac048f4b7" LAST-CHANGE="2024-04-18T20:01:09-05:00" LONG-NAME="RL2.3">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.3">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Alarms">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:59:14-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:01:09-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="b9efc32e-d6b7-412d-9bb6-620eeb97d45c" LAST-CHANGE="2024-04-18T20:00:08-05:00" LONG-NAME="RL2.3.1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.3.1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Operating mode dial switch logic shall able to detect shorted high or ground faults</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Operating mode short circuit">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T19:59:45-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:00:08-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_1c697249-c91b-4375-a649-7c9b4e403c37" LAST-CHANGE="2024-04-18T20:00:44-05:00" LONG-NAME="RL2.3.2">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.3.2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Pressure sensor reading shall not fall below 5 or rise above 50 cmH2O while ventilation support is active</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Pressure fault ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:00:12-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:00:44-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_5d56d28b-e7b9-4680-83e8-c970e3b7e06f" LAST-CHANGE="2024-04-18T20:01:09-05:00" LONG-NAME="RL2.3.3">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.3.3">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator shall initiate a high priority alarm if no significant volume can be delivered to the patient while the target pressure is reached</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Occlusion">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:00:44-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:01:09-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="a99d4d17-12f6-493c-b340-8102f8249e84" LAST-CHANGE="2024-04-18T20:01:30-05:00" LONG-NAME="RL2.3.4">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.3.4">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:table border="0" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><reqif-xhtml:tr><reqif-xhtml:td width="1001"><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The ventilator shall initiate a high priority alarm if the primary audio/visual alarm system is not delivering alarm signal</reqif-xhtml:p></reqif-xhtml:td></reqif-xhtml:tr></reqif-xhtml:table></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Alarm failure">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:01:09-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:01:30-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="bc6a90d0-8c2c-46ac-9b15-71fc96275765" LAST-CHANGE="2024-04-18T20:05:05-05:00" LONG-NAME="RL2.4">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.4">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Controls">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:01:35-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:05:05-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="_405f31b3-f6a1-4bbe-a8be-8f0c17f341dc" LAST-CHANGE="2024-04-18T20:10:25-05:00" LONG-NAME="RL2.4.1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL2.4.1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><reqif-xhtml:span style="font-family:'MS Shell Dlg 2';">PID shall be tuned to have controller rise time &lt; 10sec</reqif-xhtml:span></reqif-xhtml:p></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="PID rise time">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:03:33-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-04-18T20:10:25-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="" IDENTIFIER="f146969c-56e9-4154-97a6-d4b5f57d523d" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL3.1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="RL3.1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_fffa0e15-40fb-3214-a0ab-65e31ba84d08</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div><reqif-xhtml:p align="left" style="margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><reqif-xhtml:span style="font-family:'MS Shell Dlg 2';">This is a software module test requirement</reqif-xhtml:span></reqif-xhtml:p></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_a6fa053f-f4de-3c02-9dd2-e7834aa679d5</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Test Requirement">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_289148b7-4b73-373f-a98b-c1c8ac7f7e1f</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-XHTML IS-SIMPLIFIED="false">
+              <THE-VALUE>
+                <reqif-xhtml:div></reqif-xhtml:div>
+              </THE-VALUE>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_570342dd-01a0-43cb-af5c-8eaf89525836</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_0394fe54-9dd9-41da-84bc-f1b8759deef9</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ppatel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_341c5538-a221-426a-a31f-9c7f0767cff4</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_06aa2ca2-0380-44e8-a467-da80c524f5da</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-05-07T16:19:27-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>bd431783-035a-4369-aef2-78961e3b1a71</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+            <ATTRIBUTE-VALUE-DATE THE-VALUE="2024-05-07T16:20:01-05:00">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-DATE-REF>_66308c32-88b1-4775-80ae-ddd883a97332</ATTRIBUTE-DEFINITION-DATE-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-DATE>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_fce8a8d7-67db-3070-9191-108576c83c82</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+      </SPEC-OBJECTS>
+      <SPEC-RELATIONS/>
+      <SPECIFICATIONS>
+        <SPECIFICATION DESC="" IDENTIFIER="e3904f0c-7a8c-472d-b18d-f46d07cee7ae" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="VentilatorRequirements">
+          <VALUES/>
+          <CHILDREN>
+            <SPEC-HIERARCHY DESC="" IDENTIFIER="_6a644fb3-43c8-4e01-8f09-8326094261b6" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL1">
+              <CHILDREN>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_33933cec-17e3-41bb-b1a6-76e64eef50bc" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL1.1">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>da8729c3-8ea9-4492-b12f-523dd7d32d9a</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_48303f71-9720-448a-9dca-33fa8fdf3289" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL1.2">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>c0e64872-6560-4018-b3b9-bfcc4f608e98</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+              <EDITABLE-ATTS/>
+              <OBJECT>
+                <SPEC-OBJECT-REF>d871340b-a3e3-44ce-8d13-59eadeccab4c</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="" IDENTIFIER="fa2c382b-ebad-49d4-aa67-f96e475d169d" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1">
+              <CHILDREN>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_3b580a24-b00d-4b27-a1b7-0dff5c682a0c" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.1">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>d665255d-7273-4c9c-9a1e-ec34adea61a3</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_8c86de4d-04b7-445e-afc7-c6c133d4ed91" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.2">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_2a5e15ac-82df-467b-ade2-3a553453d5ab</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_24580510-66d3-4a4d-a377-ba613ff726bf" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.3">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_2c9c3bb9-8b60-4648-be45-3824afe184c6</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_844a8589-0486-471a-ab39-b145a246ca30" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.4">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_9d42f672-17ca-4083-a6e5-82fd0ad2f3c3</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_87184375-e066-436e-9d88-e16c054d9fa3" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.5">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_88284eaf-0b7e-466f-82bc-6594944e9f15</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="eac8422b-e37d-4980-b249-92e17318be55" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.6">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_041586d9-9efa-48c5-a537-738bc62bd342</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="c0a11f8f-bcdf-443d-a524-da08f1565d8e" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.7">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_6a67595e-5032-4e00-a6ba-8f793c5ec483</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_60fcc442-111a-4c82-92e5-e5ef0b5c3f9a" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.8">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>a4360b25-5247-4638-b060-c53b0f3b3b8a</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_0ab5b76b-9a00-429c-9080-97c38de9ee29" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.9">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_1fbb8da2-5fcb-4c9f-b0c1-21d0141b83e8</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_73b2b01d-2eb1-4779-9d60-6c3df0d5a7f8" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.1.10">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>a327eac6-1e42-4f1c-be62-38fda292392e</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+              <EDITABLE-ATTS/>
+              <OBJECT>
+                <SPEC-OBJECT-REF>_9f221376-0e2c-4af0-91a6-20e240b4287a</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="" IDENTIFIER="_81f5cf5b-91bb-4856-be44-bbd0b4bc3bef" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.2">
+              <CHILDREN>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_08d77df5-ed46-43e2-aa98-90c564a6a7cb" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.2.1">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>f299932e-47e2-4ccc-b038-a2e7e30c3be8</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+              <EDITABLE-ATTS/>
+              <OBJECT>
+                <SPEC-OBJECT-REF>_3a60dd35-683f-43a9-8f24-2eaa814c1233</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="" IDENTIFIER="_58b38b32-8617-454d-b90f-d84d4f08f1b5" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.3">
+              <CHILDREN>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_36e05bd1-75c5-495e-9c5b-3af98cf7e73a" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.3.1">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>b9efc32e-d6b7-412d-9bb6-620eeb97d45c</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_9eac24cf-5b0c-4986-b9e9-508a19c2f9ef" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.3.2">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_1c697249-c91b-4375-a649-7c9b4e403c37</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_91ec3400-6003-473b-9bb3-27ea34d0c439" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.3.3">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_5d56d28b-e7b9-4680-83e8-c970e3b7e06f</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="cea1a548-15d4-4127-ac52-e25a52262001" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.3.4">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>a99d4d17-12f6-493c-b340-8102f8249e84</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+              <EDITABLE-ATTS/>
+              <OBJECT>
+                <SPEC-OBJECT-REF>_6cce0d00-ed63-4812-bdf9-b69ac048f4b7</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="" IDENTIFIER="d2d05839-f3c7-4ca3-844c-fc338f187b05" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.4">
+              <CHILDREN>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="_0a1aad0a-9ba5-41b6-8819-7947d7b9e659" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL2.4.1">
+                  <CHILDREN/>
+                  <EDITABLE-ATTS/>
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_405f31b3-f6a1-4bbe-a8be-8f0c17f341dc</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+              <EDITABLE-ATTS/>
+              <OBJECT>
+                <SPEC-OBJECT-REF>bc6a90d0-8c2c-46ac-9b15-71fc96275765</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="" IDENTIFIER="_94935597-436e-4532-b02b-94637a029aa9" IS-EDITABLE="false" IS-TABLE-INTERNAL="false" LAST-CHANGE="2024-05-07T16:20:01-05:00" LONG-NAME="RL3.1">
+              <CHILDREN/>
+              <EDITABLE-ATTS/>
+              <OBJECT>
+                <SPEC-OBJECT-REF>f146969c-56e9-4154-97a6-d4b5f57d523d</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+          </CHILDREN>
+          <TYPE>
+            <SPECIFICATION-TYPE-REF>_3d0e1412-4ab8-3e85-99e4-bc121ed7396a</SPECIFICATION-TYPE-REF>
+          </TYPE>
+        </SPECIFICATION>
+      </SPECIFICATIONS>
+      <SPEC-RELATION-GROUPS/>
+    </REQ-IF-CONTENT>
+  </CORE-CONTENT>
+  <TOOL-EXTENSIONS/>
+</REQ-IF>
