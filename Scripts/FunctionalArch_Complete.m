@@ -1,7 +1,7 @@
 cp = currentProject;
 
 if (pwd ~= fullfile(cp.RootFolder,"Working"))
-    cd Working\
+    cd Working
 end
 
 %Expand the System Composer tree and select Create Model by clicking on the Architecture Model button
